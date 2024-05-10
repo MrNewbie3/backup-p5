@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { setupNotifications } from "./firebase";
+import { toastNotification, sendNativeNotification } from "./notificationsHelpers";
+import useVisibilityChange from "./useVisibilityChange";
+import { register } from "./serviceWorker";
 
 function App() {
+  const isForeground = useVisibilityChange();
+  useEffect(() => {
+    setupNotifications((message) => {
+      if (isForeground) {
+        // App is in the foreground, show toast notification
+        toastNotification({
+          title:"title",
+          description: "body",
+          status: "info",
+        });
+      } else {
+        // App is in the background, show native notification
+        sendNativeNotification({
+          title:"title",
+          body:"body",
+        });
+      }
+    });
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Your app content */}
     </div>
   );
 }
