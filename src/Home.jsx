@@ -380,7 +380,15 @@ function Home() {
                   <div className="w-[63.65px] h-[11.82px] left-[12.82px] top-[49.21px] absolute"></div>
                 </div>
               </div>
-              <div className="self-stretch px-3 py-2 justify-between items-center inline-flex">
+              <div className="flex flex-col self-stretch px-3 py-2 justify-between items-center">
+                  <div className="w-6 h-6 p-[2.50px] justify-center items-center flex">
+                    <div className="w-[19px] h-[19px] relative">
+                      <img
+                        className="w-[9.50px] h-[19px] left-0 top-0 absolute"
+                        src="https://s3-alpha-sig.figma.com/img/ccbf/6ed1/0c1e190eb7a08abedbe65df678b3edc1?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G38ioiwX~USncVtQimcLGHpnFP~L~jLkQE9dioM3fkV~A~gq4ODc2jfB97RLNCOR3P~AzSKhNZqzHI~cflVc8aS-r1a33dUxZT1~qi-iHCVmf0tC4znJGsZp5blD810anG85W4v-B-t73QcY5mwzpFvqOgA79H0sqQrGUkoyT6tFiOnchlmoU-QcpGetVk8uq5lpDxl4uS7FpJQn-KZd5Y6XHt43bGjBJXnYTCtjjnIo5K6sI~M19sBFi7gi752e-2tG~h7cI73WDsqUTlE~J1W-Q0mp-1Y5zrIHnPo~ZMLOyetoqwO9xC8ftVeIMFCIguctDEDdKUfBCqOYupWcJA__"
+                      />
+                    </div>
+                  </div>
                 <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">
                   Nasi Pecel
                 </div>
@@ -389,18 +397,6 @@ function Home() {
                   <div className="w-6 h-6 relative" />
                   <div className="w-6 h-6 relative" />
                   <div className="w-6 h-6 relative" />
-                  <div className="w-6 h-6 p-[2.50px] justify-center items-center flex">
-                    <div className="w-[19px] h-[19px] relative">
-                      <img
-                        className="w-[9.50px] h-[19px] left-0 top-0 absolute"
-                        src="https://s3-alpha-sig.figma.com/img/ccbf/6ed1/0c1e190eb7a08abedbe65df678b3edc1?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G38ioiwX~USncVtQimcLGHpnFP~L~jLkQE9dioM3fkV~A~gq4ODc2jfB97RLNCOR3P~AzSKhNZqzHI~cflVc8aS-r1a33dUxZT1~qi-iHCVmf0tC4znJGsZp5blD810anG85W4v-B-t73QcY5mwzpFvqOgA79H0sqQrGUkoyT6tFiOnchlmoU-QcpGetVk8uq5lpDxl4uS7FpJQn-KZd5Y6XHt43bGjBJXnYTCtjjnIo5K6sI~M19sBFi7gi752e-2tG~h7cI73WDsqUTlE~J1W-Q0mp-1Y5zrIHnPo~ZMLOyetoqwO9xC8ftVeIMFCIguctDEDdKUfBCqOYupWcJA__"
-                      />
-                      <img
-                        className="w-[9.50px] h-[19px] left-[19px] top-0 absolute origin-top-left rotate-180 opacity-40"
-                        src="https://via.placeholder.com/10x19"
-                      />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
