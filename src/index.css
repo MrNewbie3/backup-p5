@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.frame_86 {
+  gap: 41px;
+}
+
+.frame_83 {
+  gap: 23px;
+}
+
+.frame_84 {
+  gap: 23px;
+}
+
+.frame_85 {
+  gap: 23px;
+}
