@@ -8,6 +8,8 @@ import Home from "./User/Home"
 import Menu from './User/Menu'
 import CartPayment from "./User/CartPayment";
 import History from "./User/History";
+import MenuAdm from "./Admin/MenuAdm";
+import Sidebar from "./Admin/Sidebar";
 
 function App() {
   const isForeground = useVisibilityChange();
@@ -35,7 +37,7 @@ function App() {
     });
   }, []);
 
-  return <History />;
+  return <MenuAdm/>;
 }
 
 export default App;
