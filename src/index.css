@@ -1,3 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.frame_86 {
+  gap: 41px;
+}
+
+.frame_83 {
+  gap: 23px;
+}
+
+.frame_84 {
+  gap: 23px;
+}
+
+.frame_85 {
+  gap: 23px;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +24,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
