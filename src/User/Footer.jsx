@@ -28,7 +28,7 @@ function Footer() {
             <div className="justify-start items-start gap-3 inline-flex">
               <div className="px-5 py-2 rounded-[50px] justify-center items-center gap-2.5 flex">
                 <div className="text-center text-zinc-600 text-lg font-medium font-['Manrope'] leading-[27px]">
-                  Home
+                  <Link to='/'>Home</Link>
                 </div>
               </div>
               <div className="px-3 py-2 justify-center items-center gap-2.5 flex">

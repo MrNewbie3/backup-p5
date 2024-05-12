@@ -1,14 +1,18 @@
-import MenuDetail from "./User/MenuDetail";
+import MenuDetailUser from "./User/MenuDetail";
 import React, { useEffect } from "react";
 import { setupNotifications } from "./firebase";
 import { toastNotification, sendNativeNotification } from "./notificationsHelpers";
 import useVisibilityChange from "./useVisibilityChange";
 import { io } from "socket.io-client";
-import Login from "./User/SignIn";
-import Home from "./User/Home"
-import Menu from './User/Menu'
-import CartPayment from "./User/CartPayment";
-import History from "./User/History";
+import LoginUser from "./User/SignIn";
+import HomeUser from "./User/Home"
+import MenuUser from './User/Menu'
+import CartPaymentUser from "./User/CartPayment";
+import HistoryUser from "./User/History";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./User/Navbar";
+import SignupUser from "./User/SignUp";
+import SignInUser from "./User/SignIn";
 
 function App() {
   const isForeground = useVisibilityChange();
@@ -36,7 +40,19 @@ function App() {
     });
   }, []);
 
-  return <History />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeUser />}/>
+        <Route path="/menu" element={<MenuUser />}/>
+        <Route path="/cart-payment" element={<CartPaymentUser />}/>
+        <Route path="/history" element={<HistoryUser />}/>
+        <Route path="/menu-detail" element={<MenuDetailUser />}/>
+        <Route path="/sign-up" element={<SignupUser />}/>
+        <Route path="/sign-in" element={<SignInUser />}/>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
