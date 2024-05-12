@@ -5,6 +5,10 @@ import { toastNotification, sendNativeNotification } from "./notificationsHelper
 import useVisibilityChange from "./useVisibilityChange";
 import { io } from "socket.io-client";
 import Login from "./User/SignIn";
+import Home from "./User/Home"
+import Menu from './User/Menu'
+import CartPayment from "./User/CartPayment";
+import History from "./User/History";
 
 function App() {
   const isForeground = useVisibilityChange();
@@ -32,7 +36,7 @@ function App() {
     });
   }, []);
 
-  return <Login />;
+  return <History />;
 }
 
 export default App;

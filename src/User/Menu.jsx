@@ -1,7 +1,7 @@
 function Menu() {
   return (
-    <div className="w-full">
-            <div className="w-[99vw] h-[1235.07px] px-[100px] py-20 bg-white flex-col justify-start items-center gap-14 inline-flex">
+    <div className="w-full flex flex-col items-center">
+            <div className="w-[1440px] h-[1235.07px] px-[100px] py-20 bg-white flex-col justify-start items-center gap-14 inline-flex">
       <div className="self-stretch h-[222px] px-2.5 py-10 rounded-xl flex-col justify-center items-center gap-2.5 flex">
         <div className="flex-col justify-center items-center gap-3 flex">
           <div className="text-center text-stone-950 text-5xl font-medium font-['Manrope'] leading-[57.60px]">
