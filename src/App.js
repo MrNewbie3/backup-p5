@@ -3,6 +3,7 @@ import { setupNotifications } from "./firebase";
 import { toastNotification, sendNativeNotification } from "./notificationsHelpers";
 import useVisibilityChange from "./useVisibilityChange";
 import { io } from "socket.io-client";
+import Home from "./Home";
 
 function App() {
   const isForeground = useVisibilityChange();
@@ -29,7 +30,8 @@ function App() {
       }
     });
   }, []);
-  return <div className="App">{/* Your app content */}</div>;
+
+  return <Home />;
 }
 
 export default App;
