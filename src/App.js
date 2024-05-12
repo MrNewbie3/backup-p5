@@ -2,33 +2,34 @@ import React, { useEffect } from "react";
 import { setupNotifications } from "./firebase";
 import { toastNotification, sendNativeNotification } from "./notificationsHelpers";
 import useVisibilityChange from "./useVisibilityChange";
-import { register } from "./serviceWorker";
+import { io } from "socket.io-client";
 
 function App() {
   const isForeground = useVisibilityChange();
+  const socket = io("http://localhost:3000");
+  socket.on("connect", (socket) => {
+    console.log(socket);
+  });
+
   useEffect(() => {
     setupNotifications((message) => {
       if (isForeground) {
         // App is in the foreground, show toast notification
         toastNotification({
-          title:"title",
+          title: "title",
           description: "body",
           status: "info",
         });
       } else {
         // App is in the background, show native notification
         sendNativeNotification({
-          title:"title",
-          body:"body",
+          title: "title",
+          body: "body",
         });
       }
     });
   }, []);
-  return (
-    <div className="App">
-      {/* Your app content */}
-    </div>
-  );
+  return <div className="App">{/* Your app content */}</div>;
 }
 
 export default App;
