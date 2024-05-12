@@ -1,9 +1,10 @@
+import MenuDetail from "./User/MenuDetail";
 import React, { useEffect } from "react";
 import { setupNotifications } from "./firebase";
 import { toastNotification, sendNativeNotification } from "./notificationsHelpers";
 import useVisibilityChange from "./useVisibilityChange";
 import { io } from "socket.io-client";
-import Home from "./Home";
+import Login from "./User/SignIn";
 
 function App() {
   const isForeground = useVisibilityChange();
@@ -31,7 +32,7 @@ function App() {
     });
   }, []);
 
-  return <Home />;
+  return <Login />;
 }
 
 export default App;

@@ -1,7 +1,8 @@
 function Home() {
     return (
       <div className="Home">
-        <nav className="w-[1440px] h-[106px] px-[100px] py-6 bg-white justify-between items-center inline-flex">
+        <nav className="w-full"> 
+        <div className="w-[1440px] h-[106px] px-[100px] py-6 bg-white justify-between items-center inline-flex ">
           <div className="h-[58px] py-2.5 justify-start items-center gap-2 flex">
             <div className="w-9 h-9 p-[3px] flex-col justify-center items-center gap-[3px] inline-flex" />
             <div className="text-center text-stone-950 text-[32px] font-semibold font-['Manrope'] leading-[38.40px]">
@@ -15,6 +16,7 @@ function Home() {
               </div>
             </div>
             <div className="h-[52px] px-5 py-2 rounded-[50px] justify-center items-center gap-2.5 flex">
+              
               <div className="text-center text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">
                 Menu
               </div>
@@ -123,6 +125,7 @@ function Home() {
               </div>
             </div>
           </div>
+        </div>
         </nav>
         <div className="w-full h-auto px-4 pt-16 pb-8 md:px-8 lg:px-12 xl:px-16 bg-white flex flex-col justify-center items-center gap-8 sm:gap-14">
           <div className="h-[222px] px-2.5 py-10 rounded-xl flex flex-col justify-center items-center gap-2.5">
@@ -146,7 +149,7 @@ function Home() {
           </div>
           <div className="w-full flex justify-center items-center gap-8 md:gap-[30px]">
             <img
-              className="w-[527px] h-[425px] rounded-3xl border border-gray-200 object-cover"
+              className="w-[414px] h-[425px] rounded-3xl border border-gray-200 object-cover"
               src="https://s3-alpha-sig.figma.com/img/00f2/d8d9/904a4eecb300726499ef70ef0481a4bf?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Om3A5S-LqxH3BiHjn8OrSaiftgKyy3Ex~bI1-nYUCcuSgAHJxKQ5T2BXjkDhRmcVgKCKaIoJaH86iezOk8N~f4b~bN4VRO4aEvigElyc-PACQ49dvTh9~QpE0UtjYhUyvfkif8OQ3suhGZnQ0ZM4RW9z4tWX~YM76Tie2hPTdDD2NCNiAS4Lrap9CawT5ToN0ZonbKCOfdqCdwd7htr55O-d0H~LZgNymBv7U517l2X3Z8oW1gCD2XyOFqPxaV0-YCas6fInTXQOUw~8-0WsADqdMm-CetL6Ja4mUwemiEEDKFQ1EE7v-PNqvLykWT0YIxHJtWkitguMgqjs3BW13A__"
               alt="Placeholder Image"
             />
@@ -204,13 +207,13 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="w-[1440px] h-[776.54px] px-[100px] py-20 bg-white flex-col justify-start items-start gap-14 inline-flex">
+        <div className="w-full h-[776.54px] px-[100px] py-20 bg-white flex-col justify-start items-center gap-14 inline-flex">
           <div className="self-stretch justify-center items-center gap-2.5 inline-flex">
             <div className="text-center text-black text-[40px] font-medium font-['Manrope'] leading-[48px]">
               Food Tenant
             </div>
           </div>
-          <div className="self-stretch h-[512.54px] flex-col justify-start items-start gap-12 flex">
+          <div className="self-stretch h-[512.54px] flex-col justify-start items-center gap-12 flex">
             <div className="w-[1240px] p-5 bg-neutral-100 rounded-xl justify-start items-start gap-10 inline-flex">
               <div className="grow shrink basis-0 h-[386.54px] justify-start items-start gap-[21.91px] flex">
                 <div className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
