@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./User/Navbar";
 import SignupUser from "./User/SignUp";
 import SignInUser from "./User/SignIn";
+import Footer from "./User/Footer";
 
 function App() {
   const isForeground = useVisibilityChange();
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <Router>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<HomeUser />}/>
         <Route path="/menu" element={<MenuUser />}/>
@@ -51,6 +53,7 @@ function App() {
         <Route path="/sign-up" element={<SignupUser />}/>
         <Route path="/sign-in" element={<SignInUser />}/>
       </Routes>
+      <Footer/>
     </Router>
   );
 }
