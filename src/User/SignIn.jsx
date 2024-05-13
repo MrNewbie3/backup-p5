@@ -24,7 +24,6 @@ const Login = () => {
     });
     try {
       const login = await signInWithPopup(auth, provider);
-      
       alert("logged in");
     } catch (error) {
       console.log(error);

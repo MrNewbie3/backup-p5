@@ -11,3 +11,15 @@ export const loginUser = (userData) => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const signInUser = (userData) => async (dispatch) => {
+    try {
+        const response = await 
+        dispatch({
+            type:"LOGIN",
+            payload:response
+        })
+    } catch (error) {
+        
+    }
+}
