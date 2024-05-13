@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 import { getAuth } from "firebase/auth";
+import { Firestore, getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,32 +22,36 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+const auth = getAuth(app);
 const messaging = getMessaging(app);
+const firestore = getFirestore(app);
 const setupNotifications = async () => {
   try {
-    // request izin notif
     const permission = await Notification.requestPermission();
     if (permission === "granted") {
-      console.log("Notifications permission granted");
-      // get FCM Token
       try {
         const token = await getToken(messaging);
-        console.log("FCM Token", token);
       } catch (error) {
         console.log(error);
       }
-      console.log("is the token work?");
     } else {
-      console.log("Notification permission denied.");
+      alert("Notification permission denied.");
     }
-    // notif foreground (lagi dipantengin)
-    onMessage(messaging, (payload) => {
-      console.log("Foreground Message:", payload);
-    });
+    onMessage(messaging, (payload) => {});
   } catch (error) {
     console.error("Error setting up notifications:", error);
   }
 };
 
-export { messaging, setupNotifications };
+const subscribe = (token, UID) => {
+  getMessaging()
+    .subscribeToTopic(token, UID)
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+export { messaging, setupNotifications, auth, app, subscribe, firestore };
