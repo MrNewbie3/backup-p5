@@ -11,6 +11,8 @@ import CartPayment from "./User/CartPayment";
 import History from "./User/History";
 import MenuAdm from "./Admin/MenuAdm";
 import Sidebar from "./Admin/Sidebar";
+import HistoryAdm from "./Admin/HistoryAdm";
+import Payment from "./Admin/Payment";
 
 function App() {
   const isForeground = useVisibilityChange();
@@ -38,7 +40,7 @@ function App() {
     });
   }, []);
 
-  return <MenuAdm/>;
+  return <Payment/>;
 }
 
 export default App;
