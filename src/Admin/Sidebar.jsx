@@ -17,9 +17,9 @@ export default function Sidebar() {
             <div className="self-stretch h-[168px] flex-col justify-start items-start gap-3 flex">
               <div className="self-stretch p-3 rounded justify-start items-center gap-3 inline-flex">
                 <div className="w-6 h-6 relative" />
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
+                <a href='/admin/menu-admin' className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
                   Menu
-                </div>
+                </a>
               </div>
               <div className="self-stretch p-3 rounded justify-start items-center gap-3 inline-flex">
                 <div className="w-6 h-6 relative" />

@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Menu() {
+  const data = [1, 2, 3, 4, 54, 6, 7, 8, 9, 9, 76, 5, 3];
   return (
     <div className="w-full flex flex-col items-center">
       <div className="w-[1196px] h-[1138px] flex-col justify-start items-center gap-11 inline-flex">
@@ -27,9 +28,9 @@ export default function Menu() {
                 </div>
               </div>
               <div className="px-[18px] py-2.5 bg-neutral-100 rounded-[50px] border border-gray-200 justify-end items-center gap-2.5 flex">
-                <div className="text-black text-xs font-medium font-['Manrope'] leading-[18px]">
+                <button className="text-black text-xs font-medium font-['Manrope'] leading-[18px]">
                   Add Menu
-                </div>
+                </button>
                 <div className="w-4 h-4 justify-center items-center flex">
                   <div className="w-4 h-4 relative"></div>
                 </div>
@@ -77,347 +78,57 @@ export default function Menu() {
                 </div>
               </div>
             </div>
-            <div className="self-stretch bg-white justify-between items-center inline-flex">
-              <div className="p-4 justify-center items-center gap-2.5 flex">
-                <div className="rounded-md justify-start items-start gap-2 flex">
-                  <div className="w-5 h-5 relative">
-                    <div className="w-5 h-5 left-0 top-0 absolute bg-white rounded-md border border-stone-300" />
+            {data.map((data, idx) => (
+              <div key={idx} className="self-stretch bg-white justify-between items-center inline-flex">
+                <div className="p-4 justify-center items-center gap-2.5 flex">
+                  <div className="rounded-md justify-start items-start gap-2 flex">
+                    <div className="w-5 h-5 relative">
+                      <div className="w-5 h-5 left-0 top-0 absolute bg-white rounded-md border border-stone-300" />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Nama Menu
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 self-stretch bg-zinc-300 rounded" />
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 h-[49px] py-3.5 justify-start items-center gap-2.5 flex">
+                <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
                   <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                    Ini Deskripsi
+                    Nama Menu
                   </div>
                 </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-between items-center flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Makanan Berat
+                <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
+                  <div className="grow shrink basis-0 self-stretch bg-zinc-300 rounded" />
                 </div>
-                <div className="w-4 h-4 justify-center items-center flex">
-                  <div className="w-4 h-4 relative"></div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Harga
-                </div>
-              </div>
-              <div className="px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="justify-start items-start gap-3 flex">
-                  <div className="p-2 bg-blue-800 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 justify-center items-center flex">
-                      <div className="w-4 h-4 relative"></div>
+                <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
+                  <div className="grow shrink basis-0 h-[49px] py-3.5 justify-start items-center gap-2.5 flex">
+                    <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
+                      Ini Deskripsi
                     </div>
                   </div>
-                  <div className="p-2 bg-red-600 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 relative" />
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-white justify-between items-center inline-flex">
-              <div className="p-4 justify-center items-center gap-2.5 flex">
-                <div className="rounded-md justify-start items-start gap-2 flex">
-                  <div className="w-5 h-5 relative">
-                    <div className="w-5 h-5 left-0 top-0 absolute bg-white rounded-md border border-stone-300" />
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Nama Menu
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 self-stretch bg-zinc-300 rounded" />
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 h-[49px] py-3.5 justify-start items-center gap-2.5 flex">
+                <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-between items-center flex">
                   <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                    Ini Deskripsi
+                    Makanan Berat
+                  </div>
+                  <div className="w-4 h-4 justify-center items-center flex">
+                    <div className="w-4 h-4 relative"></div>
                   </div>
                 </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-between items-center flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Makanan Berat
-                </div>
-                <div className="w-4 h-4 justify-center items-center flex">
-                  <div className="w-4 h-4 relative"></div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Harga
-                </div>
-              </div>
-              <div className="px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="justify-start items-start gap-3 flex">
-                  <div className="p-2 bg-blue-800 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 justify-center items-center flex">
-                      <div className="w-4 h-4 relative"></div>
-                    </div>
-                  </div>
-                  <div className="p-2 bg-red-600 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 relative" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-white justify-between items-center inline-flex">
-              <div className="p-4 justify-center items-center gap-2.5 flex">
-                <div className="rounded-md justify-start items-start gap-2 flex">
-                  <div className="w-5 h-5 relative">
-                    <div className="w-5 h-5 left-0 top-0 absolute bg-white rounded-md border border-stone-300" />
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Nama Menu
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 self-stretch bg-zinc-300 rounded" />
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 h-[49px] py-3.5 justify-start items-center gap-2.5 flex">
+                <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
                   <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                    Ini Deskripsi
+                    Harga
                   </div>
                 </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-between items-center flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Makanan Berat
-                </div>
-                <div className="w-4 h-4 justify-center items-center flex">
-                  <div className="w-4 h-4 relative"></div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Harga
-                </div>
-              </div>
-              <div className="px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="justify-start items-start gap-3 flex">
-                  <div className="p-2 bg-blue-800 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 justify-center items-center flex">
-                      <div className="w-4 h-4 relative"></div>
+                <div className="px-4 py-3.5 justify-start items-center gap-2.5 flex">
+                  <div className="justify-start items-start gap-3 flex">
+                    <div className="p-2 bg-blue-800 rounded justify-start items-start gap-2.5 flex">
+                      <div className="w-4 h-4 justify-center items-center flex">
+                        <div className="w-4 h-4 relative"></div>
+                      </div>
+                    </div>
+                    <div className="p-2 bg-red-600 rounded justify-start items-start gap-2.5 flex">
+                      <div className="w-4 h-4 relative" />
                     </div>
                   </div>
-                  <div className="p-2 bg-red-600 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 relative" />
-                  </div>
                 </div>
               </div>
-            </div>
-            <div className="self-stretch bg-white justify-between items-center inline-flex">
-              <div className="p-4 justify-center items-center gap-2.5 flex">
-                <div className="rounded-md justify-start items-start gap-2 flex">
-                  <div className="w-5 h-5 relative">
-                    <div className="w-5 h-5 left-0 top-0 absolute bg-white rounded-md border border-stone-300" />
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Nama Menu
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 self-stretch bg-zinc-300 rounded" />
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 h-[49px] py-3.5 justify-start items-center gap-2.5 flex">
-                  <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                    Ini Deskripsi
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-between items-center flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Makanan Berat
-                </div>
-                <div className="w-4 h-4 justify-center items-center flex">
-                  <div className="w-4 h-4 relative"></div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Harga
-                </div>
-              </div>
-              <div className="px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="justify-start items-start gap-3 flex">
-                  <div className="p-2 bg-blue-800 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 justify-center items-center flex">
-                      <div className="w-4 h-4 relative"></div>
-                    </div>
-                  </div>
-                  <div className="p-2 bg-red-600 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 relative" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-white justify-between items-center inline-flex">
-              <div className="p-4 justify-center items-center gap-2.5 flex">
-                <div className="rounded-md justify-start items-start gap-2 flex">
-                  <div className="w-5 h-5 relative">
-                    <div className="w-5 h-5 left-0 top-0 absolute bg-white rounded-md border border-stone-300" />
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Nama Menu
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 self-stretch bg-zinc-300 rounded" />
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 h-[49px] py-3.5 justify-start items-center gap-2.5 flex">
-                  <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                    Ini Deskripsi
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-between items-center flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Makanan Berat
-                </div>
-                <div className="w-4 h-4 justify-center items-center flex">
-                  <div className="w-4 h-4 relative"></div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Harga
-                </div>
-              </div>
-              <div className="px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="justify-start items-start gap-3 flex">
-                  <div className="p-2 bg-blue-800 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 justify-center items-center flex">
-                      <div className="w-4 h-4 relative"></div>
-                    </div>
-                  </div>
-                  <div className="p-2 bg-red-600 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 relative" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-white justify-between items-center inline-flex">
-              <div className="p-4 justify-center items-center gap-2.5 flex">
-                <div className="rounded-md justify-start items-start gap-2 flex">
-                  <div className="w-5 h-5 relative">
-                    <div className="w-5 h-5 left-0 top-0 absolute bg-white rounded-md border border-stone-300" />
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Nama Menu
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 self-stretch bg-zinc-300 rounded" />
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 h-[49px] py-3.5 justify-start items-center gap-2.5 flex">
-                  <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                    Ini Deskripsi
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-between items-center flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Makanan Berat
-                </div>
-                <div className="w-4 h-4 justify-center items-center flex">
-                  <div className="w-4 h-4 relative"></div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Harga
-                </div>
-              </div>
-              <div className="px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="justify-start items-start gap-3 flex">
-                  <div className="p-2 bg-blue-800 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 justify-center items-center flex">
-                      <div className="w-4 h-4 relative"></div>
-                    </div>
-                  </div>
-                  <div className="p-2 bg-red-600 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 relative" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="self-stretch bg-white justify-between items-center inline-flex">
-              <div className="p-4 justify-center items-center gap-2.5 flex">
-                <div className="rounded-md justify-start items-start gap-2 flex">
-                  <div className="w-5 h-5 relative">
-                    <div className="w-5 h-5 left-0 top-0 absolute bg-white rounded-md border border-stone-300" />
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Nama Menu
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="grow shrink basis-0 self-stretch bg-zinc-300 rounded" />
-              </div>
-              <div className="grow shrink basis-0 h-[118px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Ini Deskeripsi
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-between items-center flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Makanan Berat
-                </div>
-                <div className="w-4 h-4 justify-center items-center flex">
-                  <div className="w-4 h-4 relative"></div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 h-[49px] px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
-                  Harga
-                </div>
-              </div>
-              <div className="px-4 py-3.5 justify-start items-center gap-2.5 flex">
-                <div className="justify-start items-start gap-3 flex">
-                  <div className="p-2 bg-blue-800 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 justify-center items-center flex">
-                      <div className="w-4 h-4 relative"></div>
-                    </div>
-                  </div>
-                  <div className="p-2 bg-red-600 rounded justify-start items-start gap-2.5 flex">
-                    <div className="w-4 h-4 relative" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Home() {
+  const kantin = [1, 2, 3];
   return (
     <div className="Home">
       <nav className="w-full">
@@ -222,7 +223,8 @@ function Home() {
         <div className="self-stretch h-[512.54px] flex-col justify-start items-center gap-12 flex">
           <div className="w-[1240px] p-5 bg-neutral-100 rounded-xl justify-start items-start gap-10 inline-flex">
             <div className="grow shrink basis-0 h-[386.54px] justify-start items-start gap-[21.91px] flex">
-              <div className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
+              {kantin.map((data, idx) => (
+                <div key={idx} className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
                 <div className="self-stretch h-[328.63px] bg-blue-800 rounded-xl flex-col justify-center items-center gap-[18.26px] flex">
                   <div className="opacity-10 w-[94px] h-[150px] relative">
                     <div className="w-[42.01px] h-[8.45px] left-[26px] top-[19.15px] absolute"></div>
@@ -258,119 +260,12 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
-                <div className="self-stretch h-[328.63px] bg-blue-800 rounded-xl flex-col justify-center items-center gap-[18.26px] flex">
-                  <div className="opacity-10 w-[94px] h-[150px] relative">
-                    <div className="w-[42.01px] h-[8.45px] left-[26px] top-[19.15px] absolute"></div>
-                    <div className="w-[62px] h-[7.56px] left-[16px] top-[15.72px] absolute"></div>
-                    <div className="w-[94px] h-[23.35px] left-0 top-[27.60px] absolute">
-                      <div className="w-[94px] h-[18.74px] left-0 top-0 absolute"></div>
-                      <div className="w-[94px] h-[4.61px] left-0 top-[18.74px] absolute"></div>
-                    </div>
-                    <div className="w-[47px] h-[89.11px] left-[23.50px] top-[60.89px] absolute">
-                      <div className="w-[32.46px] h-[22.41px] left-[7.27px] top-[2.23px] absolute">
-                        <div className="w-[24.89px] h-[22.41px] left-[3.79px] top-0 absolute">
-                          <div className="w-5 h-[13.09px] left-[1.83px] top-[8.37px] absolute">
-                            <div className="left-[1.60px] top-[-0px] absolute text-white text-[4.67px] font-bold font-['Quicksand']">
-                              we are
-                            </div>
-                            <div className="left-0 top-[4.09px] absolute text-white text-[7.59px] font-bold font-['Quicksand']">
-                              Open
-                            </div>
-                          </div>
-                        </div>
-                        <div className="w-[32.46px] h-[7.75px] left-0 top-[10.53px] absolute">
-                          <div className="w-[2.94px] h-[7.75px] left-[29.52px] top-0 absolute"></div>
-                          <div className="w-[2.94px] h-[7.75px] left-0 top-0 absolute"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-[76.15px] h-[80.48px] left-[10.11px] top-[63.51px] absolute"></div>
-                  </div>
-                </div>
-                <div className="self-stretch px-[10.95px] py-[7.30px] justify-start items-center gap-[18.26px] inline-flex">
-                  <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">
-                    Kantin YYK
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
-                <div className="self-stretch h-[328.63px] bg-blue-800 rounded-xl flex-col justify-center items-center gap-[18.26px] flex">
-                  <div className="opacity-10 w-[94px] h-[150px] relative">
-                    <div className="w-[42.01px] h-[8.45px] left-[26px] top-[19.15px] absolute"></div>
-                    <div className="w-[62px] h-[7.56px] left-[16px] top-[15.72px] absolute"></div>
-                    <div className="w-[94px] h-[23.35px] left-0 top-[27.60px] absolute">
-                      <div className="w-[94px] h-[18.74px] left-0 top-0 absolute"></div>
-                      <div className="w-[94px] h-[4.61px] left-0 top-[18.74px] absolute"></div>
-                    </div>
-                    <div className="w-[47px] h-[89.11px] left-[23.50px] top-[60.89px] absolute">
-                      <div className="w-[32.46px] h-[22.41px] left-[7.27px] top-[2.23px] absolute">
-                        <div className="w-[24.89px] h-[22.41px] left-[3.79px] top-0 absolute">
-                          <div className="w-5 h-[13.09px] left-[1.83px] top-[8.37px] absolute">
-                            <div className="left-[1.60px] top-[-0px] absolute text-white text-[4.67px] font-bold font-['Quicksand']">
-                              we are
-                            </div>
-                            <div className="left-0 top-[4.09px] absolute text-white text-[7.59px] font-bold font-['Quicksand']">
-                              Open
-                            </div>
-                          </div>
-                        </div>
-                        <div className="w-[32.46px] h-[7.75px] left-0 top-[10.53px] absolute">
-                          <div className="w-[2.94px] h-[7.75px] left-[29.52px] top-0 absolute"></div>
-                          <div className="w-[2.94px] h-[7.75px] left-0 top-0 absolute"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-[76.15px] h-[80.48px] left-[10.11px] top-[63.51px] absolute"></div>
-                  </div>
-                </div>
-                <div className="self-stretch px-[10.95px] py-[7.30px] justify-start items-center gap-[18.26px] inline-flex">
-                  <div className="text-zinc-600 text-2xl font-medium font-['Manrope'] leading-9">
-                    Kantin Bu Marni
-                  </div>
-                </div>
-              </div>
-              <div className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
-                <div className="self-stretch h-[328.63px] bg-blue-800 rounded-xl flex-col justify-center items-center gap-[18.26px] flex">
-                  <div className="opacity-10 w-[94px] h-[150px] relative">
-                    <div className="w-[42.01px] h-[8.45px] left-[26px] top-[19.15px] absolute"></div>
-                    <div className="w-[62px] h-[7.56px] left-[16px] top-[15.72px] absolute"></div>
-                    <div className="w-[94px] h-[23.35px] left-0 top-[27.60px] absolute">
-                      <div className="w-[94px] h-[18.74px] left-0 top-0 absolute"></div>
-                      <div className="w-[94px] h-[4.61px] left-0 top-[18.74px] absolute"></div>
-                    </div>
-                    <div className="w-[47px] h-[89.11px] left-[23.50px] top-[60.89px] absolute">
-                      <div className="w-[32.46px] h-[22.41px] left-[7.27px] top-[2.23px] absolute">
-                        <div className="w-[24.89px] h-[22.41px] left-[3.79px] top-0 absolute">
-                          <div className="w-5 h-[13.09px] left-[1.83px] top-[8.37px] absolute">
-                            <div className="left-[1.60px] top-[-0px] absolute text-white text-[4.67px] font-bold font-['Quicksand']">
-                              we are
-                            </div>
-                            <div className="left-0 top-[4.09px] absolute text-white text-[7.59px] font-bold font-['Quicksand']">
-                              Open
-                            </div>
-                          </div>
-                        </div>
-                        <div className="w-[32.46px] h-[7.75px] left-0 top-[10.53px] absolute">
-                          <div className="w-[2.94px] h-[7.75px] left-[29.52px] top-0 absolute"></div>
-                          <div className="w-[2.94px] h-[7.75px] left-0 top-0 absolute"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-[76.15px] h-[80.48px] left-[10.11px] top-[63.51px] absolute"></div>
-                  </div>
-                </div>
-                <div className="self-stretch px-[10.95px] py-[7.30px] justify-start items-center gap-[18.26px] inline-flex">
-                  <div className="text-zinc-600 text-2xl font-medium font-['Manrope'] leading-9">
-                    Kantin Mba RR
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           <div className="self-stretch justify-center items-center gap-2.5 inline-flex">
             <div className="text-stone-950 text-[32px] font-semibold font-['Manrope'] leading-[38.40px]">
-              See all
+              <Link to='/menu'>See all</Link>
             </div>
           </div>
         </div>

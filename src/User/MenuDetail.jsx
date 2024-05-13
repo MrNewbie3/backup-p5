@@ -11,8 +11,8 @@ function MenuDetail() {
           </div>
         </div>
         <div className="self-stretch h-[1227.79px] flex-col justify-start items-center gap-8 flex">
-          {data.map((data.idx) = (
-            <div className="self-stretch justify-center items-start gap-8 inline-flex">
+          {data.map((data, idx) => (
+            <div key={idx} className="self-stretch justify-center items-start gap-8 inline-flex">
             <div className="grow shrink basis-0 h-[387.93px] flex-col justify-start items-start gap-2 inline-flex">
               <img
                 className="w-[399px] h-[329px] rounded-xl"

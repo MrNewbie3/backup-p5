@@ -12,7 +12,10 @@ import HistoryUser from "./User/History";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./User/Navbar";
 import SignupUser from "./User/SignUp";
-import SignInUser from "./User/SignIn";
+import Footer from "./User/Footer";
+import Sidebar from "./Admin/Sidebar"
+import MenuAdm from "./Admin/MenuAdm";
+
 
 function App() {
   const isForeground = useVisibilityChange();
@@ -42,6 +45,7 @@ function App() {
 
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomeUser />} />
         <Route path="/menu" element={<MenuUser />} />
@@ -49,8 +53,10 @@ function App() {
         <Route path="/history" element={<HistoryUser />} />
         <Route path="/menu-detail" element={<MenuDetailUser />} />
         <Route path="/sign-up" element={<SignupUser />} />
-        <Route path="/sign-in" element={<SignInUser />} />
+        <Route path="/sign-in" element={<LoginUser />} />
+        <Route path="/menu-admin" element={<MenuAdm />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
