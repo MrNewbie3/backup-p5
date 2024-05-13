@@ -11,12 +11,10 @@ export default function History() {
           </div>
         </div>
         <div className="self-stretch h-[816px] flex-col justify-start items-start gap-6 flex">
-          <div className="text-center text-stone-950 text-[40px] font-medium font-['Manrope'] leading-[48px]">
-            Today
-          </div>
+          <div className="text-center text-stone-950 text-[40px] font-medium font-['Manrope'] leading-[48px]">Today</div>
           <div className="self-stretch h-64 flex-wrap justify-start items-start gap-6 flex">
             {data.map((data, idx) => (
-              <div className="self-stretch justify-start items-start gap-6 inline-flex">
+              <div key={idx} className="self-stretch justify-start items-start gap-6 inline-flex">
                 <div className="grow shrink basis-0 max-w-lg h-[184px] justify-start items-center gap-6 flex">
                   <img
                     className="basis-0 h-[184px] rounded-xl"
