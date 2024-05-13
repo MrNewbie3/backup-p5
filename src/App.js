@@ -5,8 +5,8 @@ import { toastNotification, sendNativeNotification } from "./notificationsHelper
 import useVisibilityChange from "./useVisibilityChange";
 import { io } from "socket.io-client";
 import LoginUser from "./User/SignIn";
-import HomeUser from "./User/Home"
-import MenuUser from './User/Menu'
+import HomeUser from "./User/Home";
+import MenuUser from "./User/Menu";
 import CartPaymentUser from "./User/CartPayment";
 import HistoryUser from "./User/History";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -45,13 +45,13 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<HomeUser />}/>
-        <Route path="/menu" element={<MenuUser />}/>
-        <Route path="/cart-payment" element={<CartPaymentUser />}/>
-        <Route path="/history" element={<HistoryUser />}/>
-        <Route path="/menu-detail" element={<MenuDetailUser />}/>
-        <Route path="/sign-up" element={<SignupUser />}/>
-        <Route path="/sign-in" element={<SignInUser />}/>
+        <Route path="/" element={<HomeUser />} />
+        <Route path="/menu" element={<MenuUser />} />
+        <Route path="/cart-payment" element={<CartPaymentUser />} />
+        <Route path="/history" element={<HistoryUser />} />
+        <Route path="/menu-detail" element={<MenuDetailUser />} />
+        <Route path="/sign-up" element={<SignupUser />} />
+        <Route path="/sign-in" element={<SignInUser />} />
       </Routes>
       <Footer/>
     </Router>

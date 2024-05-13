@@ -4,7 +4,7 @@ export default function History() {
   const data = [1, 2, 3, 4, 54, 6, 7, 8, 9, 9, 76, 5, 3];
   return (
     <div className="flex flex-col items-center">
-      <div className="w-[1440px] h-[1090px] px-[100px] py-20 bg-white flex-col justify-start items-start gap-14 inline-flex">
+      <div className="max-w-[1440px] h-[1090px] px-[100px] py-20 bg-white flex-col justify-start items-start gap-14 inline-flex">
         <div className="flex-col justify-start items-start gap-3 flex">
           <div className="text-center text-stone-950 text-5xl font-medium font-['Manrope'] leading-[57.60px]">History Transaction</div>
         </div>
