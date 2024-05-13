@@ -1,9 +1,129 @@
 import { Link } from "react-router-dom";
+import "flowbite";
 
 function Home() {
   const kantin = [1, 2, 3];
   return (
     <div className="Home">
+      <nav className="bg-white border-gray-200">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <div className="h-[58px] py-2.5 justify-start items-center gap-2 flex">
+           
+            <svg
+              className="w-9 h-9 p-[3px] flex-col justify-center items-center gap-[3px] inline-flex"
+              width="32"
+              height="24"
+              viewBox="0 0 32 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="Vector"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.48368 0.732117L0.980469 8.23533L8.50975 15.7646L16.0129 23.2678L31.0192 8.26146L23.5161 0.758268L16.013 8.2614L8.48368 0.732117Z"
+                fill="#101010"
+                alt="Cantogo Logo"
+              />
+            </svg>
+
+            <div className="text-center text-stone-950 text-[32px] font-semibold font-['Manrope'] leading-[38.40px]">
+              Cantogo
+            </div>
+          </div>
+          <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button
+              type="button"
+              className="flex text-sm bg-gray-800 rounded-full md:me-0"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="user-dropdown"
+              data-dropdown-placement="bottom"
+            >
+              <span className="sr-only">Open user menu</span>
+              <img
+                className="w-8 h-8 rounded-full"
+                src="/docs/images/people/profile-picture-3.jpg"
+                alt="user photo"
+              />
+            </button>
+            
+            {/* Dropdown menu */}
+            <div
+              className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-600"
+              id="user-dropdown"
+            >
+              <div className="px-4 py-3">
+                <span className="block text-sm text-gray-900 dark:text-white">
+                  Bonnie Green
+                </span>
+                <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
+                  name@flowbite.com
+                </span>
+              </div>
+              <ul className="py-2" aria-labelledby="user-menu-button">
+                <li>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >
+                    Sign out
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              data-collapse-toggle="navbar-user"
+              type="button"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
+              aria-controls="navbar-user"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-user"
+          >
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+              <li>
+                <a
+                  href="#"
+                  className="text-center text-zinc-500 hover:text-stone-950 active:text-stone-950 current text-2xl font-medium font-['Manrope'] leading-9"
+                  aria-current="page"
+                >
+                  <Link to="/">Home</Link>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-center text-zinc-500 hover:text-stone-950 active:text-stone-950 text-2xl font-medium font-['Manrope'] leading-9"
+                >
+                  <Link to="/menu">Menu</Link>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <div className="w-full h-auto px-4 pt-16 pb-8 md:px-8 lg:px-12 xl:px-16 bg-white flex flex-col justify-center items-center gap-8 sm:gap-14">
         <div className="h-[222px] px-2.5 py-10 rounded-xl flex flex-col justify-center items-center gap-2.5">
           <div className="flex flex-col justify-center items-center gap-3">
@@ -120,7 +240,6 @@ function Home() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

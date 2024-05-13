@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-
+import 'flowbite';
 
 function Navbar() {
   return (
     <nav className="w-full flex flex-col items-center">
     <div className="w-[1440px] flex flex-wrap h-[106px] px-[100px] py-6 bg-white justify-between items-center ">
       <div className="h-[58px] py-2.5 justify-start items-center gap-2 flex">
-        {/* <div className="w-9 h-9 p-[3px] flex-col justify-center items-center gap-[3px] inline-flex" /> */}
         <svg
         className="w-9 h-9 p-[3px] flex-col justify-center items-center gap-[3px] inline-flex"
         width="32"
@@ -148,6 +147,7 @@ function Navbar() {
           </div>
         </div>
       </div>
+      
     </div>
   </nav>
   );
