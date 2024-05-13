@@ -15,6 +15,8 @@ import SignupUser from "./User/SignUp";
 import Footer from "./User/Footer";
 import Sidebar from "./Admin/Sidebar"
 import MenuAdm from "./Admin/MenuAdm";
+import HistoryAdm from "./Admin/HistoryAdm";
+import Payment from "./Admin/Payment";
 
 
 function App() {

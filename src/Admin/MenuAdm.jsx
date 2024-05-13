@@ -11,7 +11,7 @@ export default function Menu() {
           </div>
           <div />
         </div>
-        <div className="h-[1002px] p-5 bg-white rounded-xl border border-gray-200 flex-col justify-start items-start gap-6 flex">
+        <div className="w-[1116px] h-[1002px] p-5 bg-white rounded-xl border border-gray-200 flex-col justify-start items-start gap-6 flex">
           <div className="self-stretch justify-between items-center inline-flex">
             <div className="grow shrink basis-0 flex-col justify-center items-start inline-flex">
               <div className="text-black text-2xl font-medium font-['Manrope'] leading-9">
@@ -38,7 +38,7 @@ export default function Menu() {
             </div>
           </div>
           <div className="self-stretch h-[878px] rounded-xl border border-gray-200 flex-col justify-start items-start flex">
-            <div className="self-stretch bg-neutral-100 rounded-tl-xl rounded-tr-xl justify-between items-center inline-flex">
+             <div className="self-stretch bg-neutral-100 rounded-tl-xl rounded-tr-xl justify-between items-center inline-flex">
               <div className="p-4 justify-center items-center gap-2.5 flex">
                 <div className="rounded-md justify-start items-start gap-2 flex">
                   <div className="w-5 h-5 relative">
