@@ -1,5 +1,5 @@
 function MenuDetail() {
-  const data = [1, 2, 3, 4, 54, 6, 7, 8, 9, 9, 76, 5, 3];
+  const menu = [1, 2, 3, 4, 54, 6, 7, 8, 9, 9, 76, 5, 3];
   return (
     <div className="w-full flex flex-col items-center">
       <div className="w-[1440px] h-[1772.42px] px-[100px] py-20 bg-white flex-col justify-start items-center gap-14 inline-flex">
@@ -11,23 +11,23 @@ function MenuDetail() {
           </div>
         </div>
         <div className="self-stretch h-[1227.79px] flex-col justify-start items-center gap-8 flex">
-          {data.map((data, idx) => (
+          {menu.map((data, idx) => (
             <div key={idx} className="self-stretch justify-center items-start gap-8 inline-flex">
-            <div className="grow shrink basis-0 h-[387.93px] flex-col justify-start items-start gap-2 inline-flex">
-              <img
-                className="w-[399px] h-[329px] rounded-xl"
-                src="https://via.placeholder.com/399x329"
-              />
-              <div className="self-stretch px-3 py-2 justify-between items-center inline-flex">
-                <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">
-                  Nasi Pecel
-                </div>
-                <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">
-                  15.000
+              <div className="grow shrink basis-0 h-[387.93px] flex-col justify-start items-start gap-2 inline-flex">
+                <img
+                  className="w-[399px] h-[329px] rounded-xl"
+                  src="https://via.placeholder.com/399x329"
+                />
+                <div className="self-stretch px-3 py-2 justify-between items-center inline-flex">
+                  <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">
+                    Nasi Pecel
+                  </div>
+                  <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">
+                    15.000
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           ))}
         </div>
       </div>
