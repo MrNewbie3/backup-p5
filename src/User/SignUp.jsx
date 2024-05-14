@@ -4,7 +4,7 @@ import { auth, firestore, messaging } from "../firebase";
 import { GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import { addDoc, collection } from "firebase/firestore";
 import { useDispatch } from "react-redux";
-import { loginUser } from "../action/action";
+import { loginUser, signInUser } from "../action/action";
 import { useAuth } from "../hooks/useAuth";
 
 const Signup = () => {
@@ -55,8 +55,8 @@ const Signup = () => {
     };
 
     try {
-      dispatch(loginUser(payload));
-      login(payload);
+      dispatch(signInUser(payload));
+      
     } catch (error) {
       console.log(error);
     }

@@ -1,15 +1,27 @@
 import React, { useState } from "react";
 import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { login } from "../service/api.service";
+import { loginUser } from "../action/action";
+import { useDispatch } from "react-redux";
+import { redirect, useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 const Login = () => {
   const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const payload = {
+        email,
+        password,
+      };
+      dispatch(loginUser(payload));
       alert("success");
+      // return navigate("/");
     } catch (error) {
       if (error.code === "auth/invalid-credential") {
         alert("Invalid credentials error");
@@ -24,8 +36,17 @@ const Login = () => {
     });
     try {
       const login = await signInWithPopup(auth, provider);
+      console.log(login.user);
+      const payload = {
+        email: login.user.email,
+        password: "",
+        is_google_loggin: true,
+      };
+      dispatch(loginUser(payload));
+      navigate("/");
       alert("logged in");
     } catch (error) {
+      alert("login cancelled");
       console.log(error);
     }
   };
@@ -78,10 +99,10 @@ const Login = () => {
           <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline">
             Sign In
           </button>
+          <button type="button" onClick={loginWithGoogle} className="bg-red-500 hover:bg-red-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">
+            SignIn with Google
+          </button>
         </form>
-        <button onClick={loginWithGoogle} className="bg-red-500 hover:bg-red-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">
-          Signup with Google
-        </button>
       </div>
     </div>
   );

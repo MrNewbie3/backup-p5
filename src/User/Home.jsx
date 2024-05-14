@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 
 function Home() {
+  const { user } = useAuth();
   const kantin = [1, 2, 3];
   return (
     <div className="Home">
@@ -8,20 +10,11 @@ function Home() {
         <div className="h-[222px] px-2.5 py-10 rounded-xl flex flex-col justify-center items-center gap-2.5">
           <div className="flex flex-col justify-center items-center gap-3">
             <div className="text-center">
-              <span className="text-stone-950 text-5xl font-medium font-['Manrope'] leading-[57.60px]">
-                Hai{" "}
-              </span>
-              <span className="text-stone-950 text-5xl font-medium font-['Manrope'] underline leading-[57.60px]">
-                Adit
-              </span>
-              <span className="text-stone-950 text-5xl font-medium font-['Manrope'] leading-[57.60px]">
-                , Mau Makan Apa Hari Ini?{" "}
-              </span>
+              <span className="text-stone-950 text-5xl font-medium font-['Manrope'] leading-[57.60px]">Hai </span>
+              <span className="text-stone-950 text-5xl font-medium font-['Manrope'] underline leading-[57.60px]">{user.data.name}</span>
+              <span className="text-stone-950 text-5xl font-medium font-['Manrope'] leading-[57.60px]">, Mau Makan Apa Hari Ini? </span>
             </div>
-            <div className="w-[774px] text-center text-zinc-600 text-2xl font-medium font-['Manrope'] leading-9">
-              Males antri makan? Pesanan dianter langsung ke meja kamu, dijamin
-              fresh, sehat, dan bikin semangat kerja balik naik lagi.
-            </div>
+            <div className="w-[774px] text-center text-zinc-600 text-2xl font-medium font-['Manrope'] leading-9">Males antri makan? Pesanan dianter langsung ke meja kamu, dijamin fresh, sehat, dan bikin semangat kerja balik naik lagi.</div>
           </div>
         </div>
         <div className="w-full flex justify-center items-center gap-8 md:gap-[30px]">
@@ -51,53 +44,40 @@ function Home() {
       </div>
 
       <div className="w-full px-4 py-12 bg-white flex flex-col items-center gap-6 sm:px-6 md:px-12 lg:px-20 xl:px-24 2xl:px-32">
-        <div className="text-center text-black text-[40px] font-medium font-['Manrope'] leading-[48px]">
-          Categories
-        </div>
+        <div className="text-center text-black text-[40px] font-medium font-['Manrope'] leading-[48px]">Categories</div>
         <div className="flex flex-wrap justify-center gap-12 pt-5 sm:justify-start">
           <div className="w-36 sm:w-44 md:w-48 flex flex-col items-center gap-5">
             <img
               className="w-[139px] h-[139px] rounded-full object-cover object-right"
               src="https://s3-alpha-sig.figma.com/img/93fc/44f4/cc20b85ac153e04f020a3c7d0244104f?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DoOKG07n5MOMU--cX2BCIO-9mtZpohbFWjX5ftjeoSnU9za8qbejI0wIspzgq8IT4ev~jK3zGotpc8-4rbZOMmYSNmmtEXVt0JKXOEx8LDMF6iLJB9JTfmj4vNs3-jzb4aA25p4KG9~Ka~GYpDA41KS2hv~Tvpczjoa-Z1AcX8pHl8qrY~KDSbFi~RqMd6~ANGStK8ZtlaHz0cBnFjHk0Nxv-N-27qC2wccXcSB2vdCxgQ~ztcTSJFqVhpBobeeY~CRHODgl1aOfQfMYMiEpCz63zv~e7HHQnGi6A~iux8Yk2Qeh4yVLL97EIKU5Hw6f6shWkbpiO2LFp2imQfxpYg__"
             />
-            <div className="text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">
-              Makanan Berat
-            </div>
+            <div className="text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">Makanan Berat</div>
           </div>
           <div className="w-36 sm:w-44 md:w-48 flex flex-col items-center gap-5">
             <img
               className="w-[139px] h-[139px] rounded-full object-cover"
               src="https://s3-alpha-sig.figma.com/img/cb6d/23e8/536beee37df622d727d0b3fbca5cb619?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J3XsbC4u6cB1wzLFnsVm2cXZjKz1ViEX6o9RRzmVSLQPpXsYoPVPoz-tH5A6ACeaZHD0H4C~ivEiylSGw3n5yCVLLgLvziEnVIoVSeVXGMzcUNQxrCp-oQr~YpmVHnbtfVHkD23rAltmkVvzwgXsrApiyX~X2vU508tdfplU-uymkSzqbMwegwKUeJI-grKYMyTNiHfuxwDg9WpIelWNPTm4dx6AbOB82MCmP2pO7zLZooP7xJsZ7m1EXH6ylH~ugwLZLH0t35UtFWemf9aOyXThPqt6DUXaHkBBaNQdhJJJQVLZAmItIcJdTov1j65EJ1B5KymKFRD6c5HI1KDY2w__"
             />
-            <div className="text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">
-              Makanan Ringan
-            </div>
+            <div className="text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">Makanan Ringan</div>
           </div>
           <div className="w-36 sm:w-44 md:w-48 flex flex-col items-center gap-5">
             <img
               className="w-[139px] h-[139px] rounded-full object-cover"
               src="https://s3-alpha-sig.figma.com/img/b020/7d9a/b7902c25d2c0c86d9dc2930f89271cdb?Expires=1716163200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dSQOzznN9vlYXImZhs2JWSIGUYPy5NVn~2ujq9Zmbq97THW9bFgEFemQfhwm3o31HA8E2dBW-Pf8LDdIkosuq1cvrJJYx3B3f8ZhnahQBRfMdrl30gw1-04dq11yV8p5wkYXR3AuKOp6YVhweDltcFCOlmQzUQpyVWbvi5-CP9rgCWGxzPSyN2cfP5~G-3epfwwoWjKxRyZb~rtb43M1n~voTGDIXk9SxCON7yXCz3lqhCWJetLjsTShPljBoQarKSe3TgKxjiRGIhQbBfq8fKmypZNn1rOFJyYQiG6rntA0ux1Xz7yeG2sxWbsnZ3gp~WAIeFaru~76giIKUIO8Eg__"
             />
-            <div className="text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">
-              Minuman
-            </div>
+            <div className="text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">Minuman</div>
           </div>
         </div>
       </div>
       <div className="w-full h-[776.54px] px-[100px] py-20 bg-white flex-col justify-start items-center gap-14 inline-flex">
         <div className="self-stretch justify-center items-center gap-2.5 inline-flex">
-          <div className="text-center text-black text-[40px] font-medium font-['Manrope'] leading-[48px]">
-            Food Tenant
-          </div>
+          <div className="text-center text-black text-[40px] font-medium font-['Manrope'] leading-[48px]">Food Tenant</div>
         </div>
         <div className="self-stretch h-[512.54px] flex-col justify-start items-center gap-12 flex">
           <div className="w-[1240px] p-5 bg-neutral-100 rounded-xl justify-start items-start gap-10 inline-flex">
             <div className="grow shrink basis-0 h-[386.54px] justify-start items-start gap-[21.91px] flex">
               {kantin.map((data, idx) => (
-                <div
-                  key={idx}
-                  className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex"
-                >
+                <div key={idx} className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
                   <div className="self-stretch h-[328.63px] bg-blue-800 rounded-xl flex-col justify-center items-center gap-[18.26px] flex">
                     <img
                       className="w-[94px] h-[150.50px] opacity-10"
@@ -105,9 +85,7 @@ function Home() {
                     />
                   </div>
                   <div className="self-stretch px-[10.95px] py-[7.30px] justify-start items-center gap-[18.26px] inline-flex">
-                    <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">
-                      Kantin Bu Yun
-                    </div>
+                    <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">Kantin Bu Yun</div>
                   </div>
                 </div>
               ))}
@@ -120,7 +98,6 @@ function Home() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

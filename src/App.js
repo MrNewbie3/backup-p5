@@ -9,7 +9,7 @@ import HomeUser from "./User/Home";
 import MenuUser from "./User/Menu";
 import CartPaymentUser from "./User/CartPayment";
 import HistoryUser from "./User/History";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Navbar from "./User/Navbar";
 import SignupUser from "./User/SignUp";
 import Footer from "./User/Footer";
@@ -17,17 +17,15 @@ import Sidebar from "./Admin/Sidebar";
 import MenuAdm from "./Admin/MenuAdm";
 import HistoryAdm from "./Admin/HistoryAdm";
 import Payment from "./Admin/Payment";
+import { useAuth } from "./hooks/useAuth";
 
 function App() {
   const isForeground = useVisibilityChange();
   const socket = io("http://localhost:3000");
-  socket.on("connect", (socket) => {
-    console.log(socket);
-  });
+  socket.on("connect", (socket) => {});
+  const { isAuthenticated } = useAuth();
   const location = useLocation();
   const showNavbar = !(location.pathname.includes("login") || location.pathname.includes("signup"));
-
-  console.log(showNavbar);
 
   useEffect(() => {
     setupNotifications((message) => {
@@ -52,14 +50,16 @@ function App() {
     <>
       {showNavbar && <Navbar />}
       <Routes>
-        <Route path="/" element={<HomeUser />} />
-        <Route path="/menu" element={<MenuUser />} />
-        <Route path="/cart-payment" element={<CartPaymentUser />} />
-        <Route path="/history" element={<HistoryUser />} />
-        <Route path="/menu-detail" element={<MenuDetailUser />} />
-        <Route path="/signup" element={<SignupUser />} />
-        <Route path="/login" element={<LoginUser />} />
-        <Route path="/menu-admin" element={<MenuAdm />} />
+        {/* <Route path="/signup" element={<SignupUser />} /> */}
+        <Route path="/signup" element={!isAuthenticated ? <SignupUser /> : <Navigate to="/" replace />} />
+        {/* <Route path="/login" element={<LoginUser />} /> */}
+        <Route path="/login" element={!isAuthenticated ? <LoginUser /> : <Navigate to="/" replace />} />
+        <Route path="/" element={isAuthenticated ? <HomeUser /> : <Navigate to="/login" replace />} />
+        <Route path="/menu" element={isAuthenticated ? <MenuUser /> : <Navigate to="/login" replace />} />
+        <Route path="/menu-detail/:id" element={isAuthenticated ? <MenuDetailUser /> : <Navigate to="/login" replace />} />
+        <Route path="/cart-payment" element={isAuthenticated ? <CartPaymentUser /> : <Navigate to="/login" replace />} />
+        <Route path="/history" element={isAuthenticated ? <HistoryUser /> : <Navigate to="/login" replace />} />
+        <Route path="/menu-admin" element={isAuthenticated ? <MenuAdm /> : <Navigate to="/login" replace />} />
       </Routes>
       {showNavbar && <Footer />}
     </>
