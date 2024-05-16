@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import "flowbite";
 
 function Home() {
   const { user } = useAuth();
   const kantin = [1, 2, 3];
   return (
     <div className="Home">
+
+
       <div className="w-full h-auto px-4 pt-16 pb-8 md:px-8 lg:px-12 xl:px-16 bg-white flex flex-col justify-center items-center gap-8 sm:gap-14">
         <div className="h-[222px] px-2.5 py-10 rounded-xl flex flex-col justify-center items-center gap-2.5">
           <div className="flex flex-col justify-center items-center gap-3">
