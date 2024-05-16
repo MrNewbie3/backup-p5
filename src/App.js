@@ -48,7 +48,7 @@ function App() {
 
   return (
     <>
-      {showNavbar && <Navbar />}
+      <Navbar />
       <Routes>
         {/* <Route path="/signup" element={<SignupUser />} /> */}
         <Route path="/signup" element={!isAuthenticated ? <SignupUser /> : <Navigate to="/" replace />} />
@@ -61,7 +61,7 @@ function App() {
         <Route path="/history" element={isAuthenticated ? <HistoryUser /> : <Navigate to="/login" replace />} />
         <Route path="/menu-admin" element={isAuthenticated ? <MenuAdm /> : <Navigate to="/login" replace />} />
       </Routes>
-      {showNavbar && <Footer />}
+      <Footer />
     </>
   );
 }

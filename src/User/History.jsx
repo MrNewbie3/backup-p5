@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function History() {
-  const data = [1, 2, 3, 4, 54, 6, 7, 8, 9, 9, 76, 5, 3];
+  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 7, 5, 3];
   return (
     <div className="flex flex-col items-center">
       <div className="max-w-[1440px] h-[1090px] px-[100px] py-20 bg-white flex-col justify-start items-start gap-14 inline-flex">

@@ -7,9 +7,9 @@ export default function Sidebar() {
         <div className="self-stretch py-6 justify-between items-center inline-flex">
           <div className="h-[46px] py-[5px] justify-start items-center gap-2 flex">
             <div className="w-9 h-9 p-[3px] flex-col justify-center items-center gap-[3px] inline-flex" />
-            <div className="text-center text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">
+            <a href='/' className="text-center text-stone-950 text-2xl font-medium font-['Manrope'] leading-9">
               Cantogo
-            </div>
+            </a>
           </div>
         </div>
         <div className="self-stretch grow shrink basis-0 px-5 flex-col justify-between items-center flex">
@@ -17,23 +17,23 @@ export default function Sidebar() {
             <div className="self-stretch h-[168px] flex-col justify-start items-start gap-3 flex">
               <div className="self-stretch p-3 rounded justify-start items-center gap-3 inline-flex">
                 <div className="w-6 h-6 relative" />
-                <a href='/admin/menu-admin' className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
+                <a href='/menu-admin' className="text-stone-950 text-sm font-medium font-['Manrope'] leading-[21px]">
                   Menu
                 </a>
               </div>
               <div className="self-stretch p-3 rounded justify-start items-center gap-3 inline-flex">
                 <div className="w-6 h-6 relative" />
-                <div className="text-zinc-500 text-sm font-medium font-['Manrope'] leading-[21px]">
+                <a href='/history-admin' className="text-zinc-500 text-sm font-medium font-['Manrope'] leading-[21px]">
                   History
-                </div>
+                </a>
               </div>
               <div className="self-stretch p-3 rounded justify-start items-center gap-3 inline-flex">
                 <div className="w-6 h-6 justify-center items-center flex">
                   <div className="w-6 h-6 relative"></div>
                 </div>
-                <div className="text-zinc-500 text-sm font-medium font-['Manrope'] leading-[21px]">
+                <a href='/payment' className="text-zinc-500 text-sm font-medium font-['Manrope'] leading-[21px]">
                   Payment
-                </div>
+                </a>
               </div>
             </div>
           </div>

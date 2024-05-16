@@ -80,17 +80,21 @@ function Home() {
           <div className="w-[1240px] p-5 bg-neutral-100 rounded-xl justify-start items-start gap-10 inline-flex">
             <div className="grow shrink basis-0 h-[386.54px] justify-start items-start gap-[21.91px] flex">
               {kantin.map((data, idx) => (
-                <div key={idx} className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
-                  <div className="self-stretch h-[328.63px] bg-blue-800 rounded-xl flex-col justify-center items-center gap-[18.26px] flex">
-                    <img
-                      className="w-[94px] h-[150.50px] opacity-10"
-                      src="https://s3-alpha-sig.figma.com/img/93f8/fad8/1de6f4484f352436af44842500c93d50?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W~CdZtZBwSzqZ8wmcpGcogz1Bbkq6JQh5AaKTxuSpwN~wBDvbJ16J3KruERsQgxaZVC0oygZiD7UHOmdWCbsWw~~nANYLya1tslfLG6rFd~pxoHW2BwlBb0ibL~n3jSx37l1lyLxEt5jCfLWIlLrEcXDMQCK4sQRzQAogDr8z8UcnStc-5LP3RkyPr-s3tlqKmPteYoRIirFRamHbqH~PZ3XPrPeCF6taKXViOeIPCy4soHCZoPlXs-c6cvxZZsTiViMX~wJvs7DQHR7ID8ceoxyqbFhM-vUWl5lfaIzpubDdQljgVZOT0DPvjlh-RRlmamGc8mN6jwPWJXF4ZsBgA__"
-                    />
+                <Link to={`/menu-detail/${idx}`}>
+                  <div key={idx} className="grow shrink basis-0 flex-col justify-start items-start gap-[7.30px] inline-flex">
+                    <div className="self-stretch h-[328.63px] bg-blue-800 rounded-xl flex-col justify-center items-center gap-[18.26px] flex">
+                      <img
+                        className="w-[94px] h-[150.50px] opacity-10"
+                        src="https://s3-alpha-sig.figma.com/img/93f8/fad8/1de6f4484f352436af44842500c93d50?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W~CdZtZBwSzqZ8wmcpGcogz1Bbkq6JQh5AaKTxuSpwN~wBDvbJ16J3KruERsQgxaZVC0oygZiD7UHOmdWCbsWw~~nANYLya1tslfLG6rFd~pxoHW2BwlBb0ibL~n3jSx37l1lyLxEt5jCfLWIlLrEcXDMQCK4sQRzQAogDr8z8UcnStc-5LP3RkyPr-s3tlqKmPteYoRIirFRamHbqH~PZ3XPrPeCF6taKXViOeIPCy4soHCZoPlXs-c6cvxZZsTiViMX~wJvs7DQHR7ID8ceoxyqbFhM-vUWl5lfaIzpubDdQljgVZOT0DPvjlh-RRlmamGc8mN6jwPWJXF4ZsBgA__"
+                      />
+                    </div>
+                    <div className="self-stretch px-[10.95px] py-[7.30px] justify-start items-center gap-[18.26px] inline-flex">
+                      <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">
+                        Kantin Bu Yun
+                      </div>
+                    </div>
                   </div>
-                  <div className="self-stretch px-[10.95px] py-[7.30px] justify-start items-center gap-[18.26px] inline-flex">
-                    <div className="text-neutral-700 text-2xl font-medium font-['Manrope'] leading-9">Kantin Bu Yun</div>
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
